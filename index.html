@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://kit.fontawesome.com/d01cb2edf1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/login.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAhIThtheevczrAphZ-8M2aof80sm-HJ5U",
+      authDomain: "check-todo-35c25.firebaseapp.com",
+      projectId: "check-todo-35c25",
+      storageBucket: "check-todo-35c25.appspot.com",
+      messagingSenderId: "1084423495992",
+      appId: "1:1084423495992:web:3be6893b57dc4b5cf821cd"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    //make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+  </script>
+</head>
+
+<body>
+  <div class="center">
+    <h1 class="auth-title">Login</h1>
+
+    <!-- The login form -->
+    <form class="login-form">
+      <div class="input_group">
+
+        <div class="input_field">
+          <i class="fa-solid fa-envelope"></i>
+          <input id="login-email" type="email" placeholder="Email" required>
+        </div>
+        <div class="input_field">
+          <i class="fa-solid fa-lock"></i>
+          <input id="login-password" type="password" placeholder="password" required minlength="6">
+        </div>
+        <p>Lost password <a href="">Click here!</a></p>
+        <input id="login-btn" type="submit" value="Login">
+      </div>
+      <p style="text-align: center;">Don't have an account? <a class="to-sign-up">Sign Up</a></p>
+    </form>
+
+    <!-- The sign up form -->
+    <form class="sign-up-form">
+      <div class="input_group">
+        <div class="input_field">
+          <i class="fa-solid fa-user"></i>
+          <input id="sign-up-name" type="text" placeholder="Name">
+        </div>
+        <div class="input_field">
+          <i class="fa-solid fa-envelope"></i>
+          <input id="sign-up-email" type="email" placeholder="Email">
+        </div>
+        <div class="input_field">
+          <i class="fa-solid fa-lock"></i>
+          <input id="sign-up-password" type="password" placeholder="password" minlength="6">
+        </div>
+        <p>Lost password <a href="">Click here!</a></p>
+        <input type="submit" value="Sign Up">
+      </div>
+      <p style="text-align: center;">Already have an account? <a class="to-login">Login</a></p>
+    </form>
+  </div>
+</body>
+<script src="scripts/toggle.js"></script>
+<script src="scripts/auth.js"></script>
+
+</html>

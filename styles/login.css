@@ -1,0 +1,150 @@
+:root{
+  --custom-grey: #707070;
+  --custom-green: #00BB00;
+  --highlight-grey: #F2F2F2;
+  --highlight-green: #DFF9DF;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(245, 241, 241);
+  font-family: sans-serif;
+}
+.center{
+  width: 90%;
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 50px 60px;
+  background-color: white;
+}
+
+.sign-up-form{
+  display: none;
+}
+
+.center2{
+  width: 90%;
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 50px 60px;
+  background-color: white;
+}
+
+.center h1{
+  font-size: 30px;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.input_field{
+  background-color: rgb(230, 230, 230);
+  margin-bottom: 20px;
+  height: 60px;
+  align-items: center;
+  display: flex;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+input{
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: 0;
+  padding: 18px 15px;
+}
+input[type="submit"]{
+  background-color: var(--custom-green);
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="submit"]:hover{
+  background-color: #4ff74f;
+  transition: s;
+  box-shadow: 0 3px 6px rgb(185, 185, 185);
+}
+form p{
+  text-align: left;
+}
+p a{
+  text-decoration: none;
+  font-weight: bold;
+}
+.button_field{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.button_field button{
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(97, 97, 243);
+  color: white;
+  padding: 8px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.outer{
+  width: 100%;
+  text-align: center;
+  background-color: #cac9c9;
+  align-items: center;
+  padding: 14px 10px;
+  }  
+  .task_hold{
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 17px 20px;
+      margin-bottom: 10px;
+  }
+  .center_task{
+      justify-content: center;
+  }
+  .about_task{
+      margin-left: 15px;
+      
+  }
+  .about_task p{
+      margin: 0;
+      padding: 0;
+      display: block;
+      text-align:start;
+  }
+  .action_icons{
+      margin-left: auto;
+      width: 44px;
+      display: flex;
+      justify-content: space-between;
+  }
+  .task_name{
+      font-size: 15px;
+  }
+  .task_cat{
+      font-size: 11px;
+  }
+  .task_due_date{
+      font-size: 10px;
+  }
+  .add_task{
+      width: 100%;
+      padding-block: 14px;
+      font-size: 15px;
+      border-radius: 5px;
+      border:1px solid #d8d3d3;
+  }
+  .to-login, .to-sign-up{
+    cursor: pointer;
+  }

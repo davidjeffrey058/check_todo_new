@@ -1,0 +1,274 @@
+:root {
+    --custom-grey: #707070;
+    --custom-green: #00BB00;
+    --highlight-grey: #F2F2F2;
+    --highlight-green: #DFF9DF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: var(--custom-grey);
+}
+
+.app-bar {
+    width: 100%;
+}
+
+.app-bar i,
+.nav-drawer i {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-drawer {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    box-shadow: 3px 0 6px rgb(224, 224, 224);
+    z-index: 1;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: left ease-out .3s;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.nav-drawer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-drawer ul a {
+    display: block;
+    text-decoration: none;
+    color: var(--custom-grey);
+}
+
+.nav-drawer ul a.active {
+    background-color: var(--highlight-grey);
+    border-left: 4px solid var(--custom-green);
+}
+
+.nav-drawer ul a:hover {
+    background-color: var(--highlight-green);
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+}
+
+.info-container {
+    margin-left: 10px;
+}
+
+.info-container p {
+    margin: 0;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.useremail {
+    font-size: 11px;
+}
+
+.profile-pic {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--custom-green);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.logout-btn {
+    background-color: var(--highlight-green);
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #c1fbc1;
+}
+
+.content-display {
+    padding: 20px 40px 20px 20px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 28px 20px;
+}
+
+.title-container p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 0 20px;
+    color: black;
+}
+
+.outer {
+    width: 100%;
+    text-align: center;
+    background-color: var(--highlight-grey);
+    align-items: center;
+    padding: 14px 10px;
+}
+
+.task_hold {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 17px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#status-check{
+    display: none;
+}
+
+.fa-square-check {
+    color: #E3E3E3;
+    cursor: pointer;
+}
+
+.fa-square-check:hover {
+    color: var(--custom-green)
+}
+
+.center_task {
+    justify-content: center;
+}
+
+.about_task {
+    margin-left: 15px;
+
+}
+
+.about_task p {
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: start;
+}
+
+.action_icons {
+    margin-left: auto;
+    width: 44px;
+    display: flex;
+    justify-content: space-between;
+}
+.action_icons i{
+    cursor: pointer;
+}
+
+.task_name {
+    font-size: 15px;
+    color: black;
+}
+
+.task_cat {
+    font-size: 11px;
+    color: var(--custom-green);
+    font-style: italic;
+}
+
+.task_due_date {
+    font-size: 10px;
+}
+
+.add_task {
+    width: 100%;
+    padding-block: 14px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #d8d3d3;
+    background-color: white;
+    cursor: pointer;
+}
+
+.add_task:hover {
+    background-color: var(--highlight-green);
+}
+
+.action-menu{
+    display: none;
+    background-color: white;
+    width: 120px;
+    box-shadow: 0 2px 3px #d1d1d1;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    right: -25px;
+    transition: display ease-in 0.5s;
+}
+.action-menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.action-menu ul li a{
+    text-decoration: none;
+    color: var(--custom-grey);
+    font-weight: bold;
+}       
+.action-menu ul li a{
+    display: block;
+    padding: 10px;
+    text-align: left;
+}
+.action-menu ul li:hover{
+    background-color: var(--highlight-grey);
+}
+
+/* For desktop */
+@media(min-width: 1000px) {
+    .nav-drawer {
+        left: 0;
+        box-shadow: none;
+    }
+
+    .main-body {
+        margin-left: 270px;
+    }
+
+    .app-bar {
+        display: none;
+    }
+
+    .fa-xmark {
+        display: none;
+    }
+
+    .content-display {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .action-menu{
+        width: 150px;
+        right: -50px;
+    }
+}

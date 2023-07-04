@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d01cb2edf1.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles/home.css">
+    <title>Home</title>
+
+    <script>
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAhIThtheevczrAphZ-8M2aof80sm-HJ5U",
+            authDomain: "check-todo-35c25.firebaseapp.com",
+            projectId: "check-todo-35c25",
+            storageBucket: "check-todo-35c25.appspot.com",
+            messagingSenderId: "1084423495992",
+            appId: "1:1084423495992:web:3be6893b57dc4b5cf821cd"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        //make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+    </script>
+</head>
+
+<body>
+
+    <!-- The drawer -->
+    <div class="nav-drawer">
+        <i class="fa-solid fa-xmark">close</i>
+        <div class="profile-section">
+            <div class="profile-pic">
+                DJ
+            </div>
+            <div class="info-container">
+                <p class="username">David Jeffrey</p>
+                <p class="useremail">davidjeffrey058@gmail.com</p>
+            </div>
+        </div>
+        <hr width="100%">
+        <ul>
+            <li>
+                <a href="" class="active">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-star"></i>
+                    Important
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-border-all"></i>
+                    Category
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa-solid fa-people-group"></i>
+                    Collaborations
+                </a>
+            </li>
+        </ul>
+        <a class="logout-btn" onclick="logout(event)">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            Log Out
+        </a>
+    </div>
+
+    <div class="main-body">
+        <div class="app-bar">
+            <input type="checkbox" class=menu-btn id="menu-btn">
+            <label class="menu-icon" for="menu-btn"><i class="fa-solid fa-bars"></i></label>
+        </div>
+
+
+        <div class="title-container">
+            <i class="fa-solid fa-house fa-2xl" style="color: black;"></i>
+            <p>Home</p>
+        </div>
+
+        <div class="content-display">
+
+            <!-- The task container -->
+            <div class="outer">
+                <h2 class="center_task">TASK</h2>
+
+                <div class="task-rapper">
+                    <!-- Where a task from the database will be displayed -->
+
+                    <!-- Holds -->
+                    
+
+
+                </div>
+                <button class="add_task">+ Add Task</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="scripts/buildLayout.js"></script>
+<script src="scripts/home.js"></script>
+
+</html>
