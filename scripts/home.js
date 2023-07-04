@@ -20,12 +20,13 @@ auth.onAuthStateChanged(async user =>{
         var userRef = db.collection('users').doc(user.uid).collection('task');
 
         userRef.onSnapshot((snapshot) =>{
-            buildLayout(snapshot);
+            buildLayout(snapshot, user.uid);
         }, (error) => {
             console.log(error);
             console.log("Couldn't retrieve data");
         })
-
+        
+        
 
     }else{
         window.location.href = './index.html'
@@ -36,3 +37,6 @@ function logout(e){
     e.preventDefault();
     auth.signOut();
 }
+
+
+

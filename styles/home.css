@@ -157,6 +157,9 @@ body {
 .fa-square-check:hover {
     color: var(--custom-green)
 }
+.fa-square-check.checked{
+    color: var(--custom-green);
+}
 
 .center_task {
     justify-content: center;
